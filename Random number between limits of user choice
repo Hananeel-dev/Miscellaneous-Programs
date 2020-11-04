@@ -1,0 +1,26 @@
+import java.util.*;
+import java.lang.Math; 
+class random
+{
+    public random()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Enter a the lower mark for the range you want a random number from");
+        int  lm = sc.nextInt();//expanded-Lower mark
+        System.out.println("Please Enter a higher mark for the range you want a random number from");
+        int hm = sc.nextInt();//expanded-Higher mark
+        if(lm<hm)
+        {
+        int result = (int)(Math.random()*(hm-lm) + 1)+lm; 
+        System.out.println(+result);
+    }
+    else
+    {
+        
+        
+    System.out.println("Invalid Input entered");
+    System.exit(0);
+}
+    
+    }
+}

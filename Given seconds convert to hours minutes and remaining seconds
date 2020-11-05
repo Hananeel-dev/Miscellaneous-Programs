@@ -1,0 +1,18 @@
+import java.util.*;
+class time_display 
+{
+    public  time_display()
+    {
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Enter time in seconds");
+        int time = sc.nextInt();
+        int hours = (int)(time/3600);
+        int time1 = time-3600*hours;
+        int minutes =(int) (time1/60);
+        int seconds = time1-(60*minutes);
+        
+        System.out.println("Hours is "+hours);
+        System.out.println("Minutes is "+minutes);
+        System.out.println("seconds is"+seconds);
+    }
+}

@@ -1,0 +1,72 @@
+import java.util.*;
+public class CompareString
+        {
+            /**
+             * Constructor for objects of class CompareString
+             */
+            public static void main(String[] args)
+      {
+        CompareString cs = new CompareString();
+        // boolean areSame = cs.Compare("ha", "Ha", false);
+        boolean areSame;
+        String s1 = "John";
+        String s2 = "John";
+        if(s1.equals(s2))
+        {
+        areSame = cs.CompareNeelCode(s1, s2, true);
+        System.out.println("The two strings are same");
+        }
+        else
+        {
+        areSame = cs.CompareNeelCode(s1,s2,false);
+        System.out.println("The two strings are diffirent");
+        }
+        System.out.flush();
+        System.out.println("String1:" + s1);
+        System.out.println("String2:" + s2);
+        
+        
+       }
+            
+            public boolean Compare(String str1, String str2, boolean ignoreCase)
+        {
+                return str1 == str2;
+        }
+            
+            public boolean CompareNeelCode(String s1, String s2, boolean ignoreCase)
+            {
+                boolean returnValue = false;
+                
+                if(s2.length() != s1.length())
+                {
+                    returnValue = false;
+                }
+                else if(ignoreCase == true)
+                {
+                    //TODO
+                }
+                else if(ignoreCase == false)
+                {
+                    char[] array = s1.toCharArray();
+                    char[] array1 = s2.toCharArray();
+                    
+                    for(int i = 0 ; i<array.length;i++)
+                    {
+                        boolean result = (array[i] == array1[i]);
+                        if (result = true)
+                        {
+                            continue; 
+                        }
+                        else 
+                        {
+                            returnValue = false;
+                            break;
+                        }
+                    }
+                }
+                
+                return returnValue;
+            }
+
+    
+}

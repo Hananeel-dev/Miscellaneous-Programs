@@ -1,0 +1,20 @@
+import java.util.Arrays;//mainly to print the array
+import java.util.*;
+class Swapelement
+{
+    public Swapelement()
+    {
+        Scanner sc = new Scanner(System.in);//creating object to take input
+        System.out.println("Enter 1st element of int array");
+        int num1 = sc.nextInt();//element1 in array
+        System.out.println("Enter 2nd element of int array");
+        int num2 = sc.nextInt();//element 2 in array
+        System.out.println("Enter 3rd element of array");
+        int num3 = sc.nextInt();
+        int[] array = {num1,num2,num3};
+        int a = array[0];//creating 4th space to accommadate the 1st element
+        array[0]=array[array.length-1];
+        array[array.length-1]= a ;
+        System.out.println("The new Array is "+ Arrays.toString(array));
+    }
+}

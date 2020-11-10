@@ -1,0 +1,22 @@
+class Oddeven
+{
+    public Oddeven()
+    {
+        int[] array = {1,2,3};
+        for(int i=0;i<array.length;i++ )
+        {
+            if(array[i]%2==0)
+            {
+            System.out.println("This is even"+array[i]);
+            continue;
+        }
+            else
+            {
+                System.out.println("this is odd-"+array[i]);
+            continue;
+        }
+            
+        }
+        
+    }
+}

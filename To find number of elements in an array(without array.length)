@@ -1,0 +1,16 @@
+public class Nemberofelements
+{
+    public Nemberofelements ()
+    {
+        int[] array = {'1','2','3'};
+        int elements = 0; 
+        
+        for(int i:array)
+        {
+            elements++;
+        }    
+            
+        
+        System.out.println(+elements);
+    }
+}

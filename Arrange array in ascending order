@@ -1,0 +1,19 @@
+import java.util.Arrays;
+class ascarray
+{ 
+    public ascarray()
+    {
+        int[] array = {67,67,368};
+        int count = 0;
+        int largest = Math.max(array[0],array[1]);
+        int largest1 = Math.max(largest,array[array.length-1]);
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            
+            count = count + array[i] ;
+        }
+        int smallest = count - (largest+largest1) ; 
+        int[] finalarray = {smallest,largest,largest1};
+        System.out.println("Array in ascending order is"+Arrays.toString(finalarray));
+    }
+}

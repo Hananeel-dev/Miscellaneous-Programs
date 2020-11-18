@@ -1,0 +1,23 @@
+import java.util.*;
+class Nivennum
+{
+    public  Nivennum()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int num = sc.nextInt();
+        int copnum = num;
+        int digitsum = 0 ;
+        while(num!=0)
+        {
+            int digit = num%10;
+             digitsum = digitsum+digit ;
+            num = num/10;
+        }
+        if(copnum%digitsum==0)
+        System.out.println("Niven number");
+        else
+        System.out.println("non-Niven number");
+        
+    }
+}

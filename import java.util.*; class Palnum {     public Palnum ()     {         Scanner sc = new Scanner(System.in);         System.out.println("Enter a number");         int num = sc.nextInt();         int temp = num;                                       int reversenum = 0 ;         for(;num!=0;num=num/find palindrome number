@@ -18,7 +18,7 @@ class Palnum
         }
         System.out.println(reversenum);
         
-        if(temp==num)
+        if(temp==reversenum)
             System.out.println("The number is a palindrome");
         
         else

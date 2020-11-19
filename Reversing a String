@@ -1,0 +1,12 @@
+class ReverseString
+{
+    public ReverseString()
+    {
+        String str = "Hananeel";
+        char[] convertstr = str.toCharArray();
+        for(int i = convertstr.length-1 ; i >=0 ; i--)
+        {
+           System.out.print(convertstr[i]);
+        }
+    }
+}

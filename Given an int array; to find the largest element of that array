@@ -1,0 +1,23 @@
+class Gr8num
+{
+    public Gr8num()
+    {
+        int[] array = {-1,-2,-3};
+        int gr8 = array[0] ;//to access them
+        for(int i = 0 ; i < array.length;i++)
+        {
+            if(array[i]>gr8)
+            {
+                gr8 = array[i];
+                continue;
+            }
+            else
+            {
+                continue;
+            }
+            
+            
+        }
+        System.out.println("Largest element is "+gr8);
+    }
+}

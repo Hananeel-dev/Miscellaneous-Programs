@@ -1,0 +1,25 @@
+import java.util.*;
+class Replacechar
+{
+    public Replacechar()
+    {
+        String inp = "Hananeel";
+        char[] array = inp.toCharArray();
+        for(int i = 0 ; i < array.length ; i++)
+        {
+            int converter = (int)(array[i]);
+            if(converter>=65&&converter<=95)
+            {
+               int changecase = converter+32;
+               char convertcase = (char)changecase;
+               System.out.print("The converted string is"+convertcase);
+            }
+            else if (converter>=97&&converter<=122)
+            {
+                int changecase = converter-32;
+               char Case =(char) changecase;
+               System.out.print(+Case);
+            }
+        }
+    }
+}

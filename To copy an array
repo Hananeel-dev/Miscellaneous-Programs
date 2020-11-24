@@ -1,0 +1,15 @@
+import java.util.Arrays;
+class Coparray
+{
+    public Coparray()
+    {
+        int[] array = {1,2,3};
+        int[] coparray = {array.length};
+        for(int i = 0 ; i < (array.length) ; i++)
+        {
+            coparray[i] = array[i];
+        }
+        System.out.println("original Array"+Arrays.toString(array));
+        System.out.println("Copied Array :"+Arrays.toString(coparray));
+    }
+}

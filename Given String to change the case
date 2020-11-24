@@ -12,18 +12,18 @@ class Replacechar
             int converter = (int)(array[i]);
             if(converter>=65&&converter<=95)
             {
-               int changecase = converter+32;
-               char convertcase = (char)changecase;
+               int changecase = converter+32;//diffirence between uppercase and lowercase in ASCII codes is 32
+               char convertcase = (char)changecase;//convert int to char
                System.out.print(""+convertcase);
             }
             else if (converter>=97&&converter<=122)
             {
                 int changecase = converter-32;
-               char convertcase =(char)changecase;
-               System.out.print(""+convertcase);
+               char convertcase =(char)changecase;//convert int to char
+               System.out.print(""+convertcase);//not println:because want to print the elements of array after changing one after the other;not diffirent lines
             }
             else
-            System.out.println("Invalid:Only letters allowed");
+            System.out.println("Invalid:Only letters allowed");//for other symbols except letters
         }
     }
 }

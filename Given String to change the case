@@ -3,7 +3,9 @@ class Replacechar
 {
     public Replacechar()
     {
-        String inp = "Hananeel";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a String");
+        String inp =sc.next();
         char[] array = inp.toCharArray();
         for(int i = 0 ; i < array.length ; i++)
         {
@@ -12,14 +14,16 @@ class Replacechar
             {
                int changecase = converter+32;
                char convertcase = (char)changecase;
-               System.out.print("The converted string is"+convertcase);
+               System.out.print(""+convertcase);
             }
             else if (converter>=97&&converter<=122)
             {
                 int changecase = converter-32;
-               char Case =(char) changecase;
-               System.out.print(+Case);
+               char convertcase =(char)changecase;
+               System.out.print(""+convertcase);
             }
+            else
+            System.out.println("Invalid:Only letters allowed");
         }
     }
 }

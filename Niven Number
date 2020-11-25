@@ -6,9 +6,9 @@ class Nivennum
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number");
         int num = sc.nextInt();
-        int copnum = num;
-        int digitsum = 0 ;
-        while(num!=0)
+        int copnum = num;//copy the number
+        int digitsum = 0 ;//counter
+        while(num!=0)//reverser
         {
             int digit = num%10;
              digitsum = digitsum+digit ;

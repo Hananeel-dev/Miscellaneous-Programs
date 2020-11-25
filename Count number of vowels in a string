@@ -1,0 +1,68 @@
+import java.util.*;
+class Vowelcount
+{
+    public Vowelcount()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String str = sc.next();
+        char[] array = str.toCharArray();
+        int count = 0 ; 
+        int vowelcount = 0 ; 
+        
+        for(int i = 0 ; i<array.length;i++ )
+        {
+            count ++;
+            int ascii = (int)(array[i]);
+            switch(ascii)
+            {
+                case 65: 
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 97:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 69:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 101:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 73:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 105:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 79:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 111:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 85:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                case 117:
+                vowelcount++;
+                System.out.println("This is a Vowel:"+array[i]);
+                break;
+                
+            }
+        }
+        System.out.println("The number of vowels are:"+vowelcount);
+        System.out.println("The number of consonants are:"+(count-vowelcount));
+    }
+}
+    
+        
+

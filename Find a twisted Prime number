@@ -1,0 +1,54 @@
+import java.util.*;
+class Twistprime
+{
+    public Twistprime ()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a prime number");
+      int num =sc.nextInt();
+      int factors = 0 ;
+      int temp = num;//since num value  changes 
+      int rev = 0 ; 
+      for(int i = 1 ; i < num ; i ++)
+      {
+          if(num%i==0)//checking number of factors to validate prime or composite number
+          {
+              factors++;//counter for number of factors
+              continue;
+          }
+          else
+          continue;
+      }
+      if(factors==1)
+      {
+          int factor1=0;
+          while(num!=0)//reverse the number
+          {
+              int d = num%10;
+              rev = rev*10+d;
+              num=num/10;
+              
+          }
+          for(int i = 1 ; i < rev ; i ++)
+          {
+              if(rev%i==0)//validating if the reverse of the original number is prime or not 
+              {
+                  factor1++;
+                  continue;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if(factor1==1)
+            System.out.println("the number:"+temp+"/t"+"is a twisted prime number");
+            else
+            System.out.println("the number:"+temp+"/t"+"is not a twisted prime number");
+          
+      }
+      else
+      System.out.println("The number"+temp+" is not a prime number");
+    }
+    
+}

@@ -1,0 +1,25 @@
+class funtest
+{
+    public void test1()
+{
+    System.out.println("hELLO,FIRST TIME TESTING CALLING!");
+}
+int calc()
+{
+    int a = 5;
+    int b=5;
+    int c= a+b;
+    return c;
+}
+public static void  main(String[]args)
+{
+    funtest m = new funtest();//creating object with class name so as to access methods in class
+    m.test1();//call the first method
+    int result=m.calc();//since the method has a return value, to store it,variable assigned to it. 
+    System.out.println(result);//printing the return value
+  
+    
+    
+    
+}
+}

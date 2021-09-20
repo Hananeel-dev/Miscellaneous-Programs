@@ -1,0 +1,62 @@
+class longest
+{
+      public void main()
+    {
+        String input = "My nameisHananeel";
+        longest ob = new longest();
+        ob.spacer(input);
+        int get =0;
+        int get1 =0;
+        int max=0;
+        int numofSpaces = ob.counter(input);
+        if(numofSpaces>0)
+         max = input.substring(0,input.indexOf(' ')).length();
+         else
+         System.out.println(input);
+        String max1 = "";
+        for(int i = 1 ;i<= numofSpaces;i++)
+        {
+         int prevVal = i - 1 ;
+          if(i==numofSpaces)//if below is executed (when i==NumofSpaces) it get1 will receive a value of -1. Becomes OutOfBoundsException Error
+          {
+                get = ob.retPos(input," " ,prevVal-1);//getting index of spaces between words
+                get1 = ob.retPos(input," " ,prevVal);
+          }
+          else
+          {
+             get = ob.retPos(input," ",i);
+             get1 = ob.retPos(input," ",i+1);
+        }
+        if(Math.abs(get-get1)>max)
+        {
+            max=Math.abs(get-get1);
+            max1 = input.substring(get,get1);
+        }
+        }
+        System.out.println(max1);      
+    }
+       public static int retPos(String str, String substr, int n) //return the position of nth space
+      {
+         int pos = str.indexOf(substr);
+        while (--n > 0 && pos != -1)
+        pos = str.indexOf(substr, pos + 1);
+         return pos;
+      }
+      public int counter(String i )//counting number of spaces
+      {
+        int c = 0 ; 
+       for(int j = 0;j<i.length();j++)
+       {
+           
+           char ch = i.charAt(j);
+           if(ch==' ')
+           c++;
+        }
+        return c;
+      }
+      public String spacer(String a )
+      {
+         a=" "+a+" ";
+         return a;
+        }
+    }

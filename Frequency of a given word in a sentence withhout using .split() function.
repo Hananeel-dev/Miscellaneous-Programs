@@ -1,0 +1,54 @@
+import java.util.*;
+class wordFreq
+{
+    public static void main()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter sentence");
+         String inp = sc.nextLine().toLowerCase().trim();
+         inp=inp+" ";
+         int count=0;
+         for(int i = 0;i<inp.length();i++)
+         {
+             char ch = inp.charAt(i);
+             if(ch!=' '&&(ch>122||ch<97))
+             inp=inp.replace(ch,' ');
+         }
+        System.out.println("Enter word");
+        String word = sc.next().toLowerCase().trim();    
+        for(int i =0;i<inp.length();i++)
+        {
+            if(inp.charAt(i)==' ')
+            count++; //number of spaces=number of words(including space at the end)
+        }
+        wordFreq ob = new wordFreq();
+        String[] words = ob.split(inp,' ',count);//gives the number of words
+        int c =0;
+        for(int i = 0; i<words.length;i++)
+        {
+           if(word.equals(words[i]))
+            {
+            c++;
+        }
+        }
+        System.out.println("Number of occurences is "+c);
+    }
+    public String[] split(String a,char split,int spaceOccur)
+    {
+        String[] array=new String[spaceOccur];
+        int c=0;
+        int limit1=0;
+        for(int i =0;i<a.length();i++)
+        {
+            char ch= a.charAt(i);
+            
+            if(ch==split)
+            {
+                array[c]=a.substring(limit1,i+1).trim();
+                limit1=i;
+                c++;
+            }
+        }
+        return array;
+    }
+}
